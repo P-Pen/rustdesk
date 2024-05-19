@@ -1,11 +1,11 @@
 [package]
-name = "pndesk"
+name = "rustdesk"
 version = "1.2.4"
 authors = ["rustdesk <info@rustdesk.com>"]
 edition = "2021"
 build= "build.rs"
-description = "PNDesk Remote Desktop"
-default-run = "pndesk"
+description = "RustDesk Remote Desktop"
+default-run = "rustdesk"
 rust-version = "1.75"
 
 [lib]
@@ -171,10 +171,10 @@ members = ["libs/scrap", "libs/hbb_common", "libs/enigo", "libs/clipboard", "lib
 exclude = ["vdi/host", "examples/custom_plugin"]
 
 [package.metadata.winres]
-LegalCopyright = "Copyright © 2024 PenNet All rights reserved."
+LegalCopyright = "Copyright © 2024 Purslane Ltd. All rights reserved."
 ProductName = "RustDesk"
-FileDescription = "PNDesk Remote Desktop"
-OriginalFilename = "pndesk.exe"
+FileDescription = "RustDesk Remote Desktop"
+OriginalFilename = "rustdesk.exe"
 
 [target.'cfg(target_os="windows")'.build-dependencies]
 winres = "0.1"
