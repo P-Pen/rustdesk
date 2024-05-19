@@ -5,7 +5,7 @@ authors = ["rustdesk <info@rustdesk.com>"]
 edition = "2021"
 build= "build.rs"
 description = "PNDesk Remote Desktop"
-default-run = "PNdesk"
+default-run = "pndesk"
 rust-version = "1.75"
 
 [lib]
