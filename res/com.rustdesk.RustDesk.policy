@@ -8,11 +8,11 @@
   <icon_name>rustdesk</icon_name>
   <action id="com.rustdesk.RustDesk.options">
     <description>Change RustDesk options</description>
-    <message>Authentication is required to change RustDesk options</message>
-    <message xml:lang="zh_CN">要更改RustDesk选项, 需要您先通过身份验证</message>
-    <message xml:lang="zh_TW">要變更RustDesk選項, 需要您先通過身份驗證</message>
-    <message xml:lang="de">Authentifizierung zum Ändern der RustDesk-Optionen</message>
-    <annotate key="org.freedesktop.policykit.exec.path">/usr/share/rustdesk/files/polkit</annotate>
+    <message>Authentication is required to change PNDesk options</message>
+    <message xml:lang="zh_CN">要更改PNDesk选项, 需要您先通过身份验证</message>
+    <message xml:lang="zh_TW">要變更PNDesk選項, 需要您先通過身份驗證</message>
+    <message xml:lang="de">Authentifizierung zum Ändern der PNDesk-Optionen</message>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/share/pndesk/files/polkit</annotate>
     <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
     <defaults>
       <allow_any>auth_admin</allow_any>
