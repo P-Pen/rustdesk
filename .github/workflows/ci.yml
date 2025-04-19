@@ -1,19 +1,21 @@
+name: PNDesk CI
+
 on:
   workflow_dispatch:
   push:
     branches:
-      - main
-      - pndesk
+      - fix/pndesk-build
 
 jobs:
-  build:
+  verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Build
-        run: cargo build --release
-      - name: Test
-        run: cargo test
-      - name: PNDesk Version Check
+      - uses: actions/checkout@v3
+      - run: cargo clean
+      - run: cargo update
+      - run: cargo build --release --features pndesk-branding
+      - name: Binary Validation
         run: |
-          ./target/release/pndesk --version | grep "PNDesk"
+          [ -f ./target/release/pndesk ] || exit 1
+          ./target/release/pndesk --version | grep 'PNDesk'
+          strings ./target/release/pndesk | grep 'PNDESK_'
